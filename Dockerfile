@@ -8,4 +8,6 @@ RUN apt-get update \
   && apt-get clean \
   && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
-RUN echo {TODO} >> /etc/davfs2/secrets
+COPY ./start-sync.sh /usr/local/bin
+
+ENTRYPOINT [ "/usr/local/bin/start-sync.sh" ]
