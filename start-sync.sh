@@ -37,7 +37,7 @@ mount.davfs $URL $SOURCE_FOLDER
 
 # Start the endless sync process
 while true; do 
-  unison /mnt/source/Linux $DESTINATION_FOLDER -auto -batch;
+  unison $SOURCE_FOLDER $DESTINATION_FOLDER -auto -batch;
 
   if [ $FOLDER_USER -gt 0 ]; then
     chmod 755 -R $DESTINATION_FOLDER;
