@@ -1,0 +1,18 @@
+# Roots of the synchronization
+root = /mnt/source
+root = /mnt/webdrive
+
+# Log actions
+log = true
+
+# Sync settings
+fastcheck = true
+auto = true
+batch = true
+times = true
+owner = true
+group = true
+prefer = newer
+
+# Daemonize 
+repeat = 30

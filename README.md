@@ -13,9 +13,6 @@ docker run \
 -e WEBDRIVE_USER=<username> \
 -e WEBDRIVE_PASSWORD=<password> \
 -e WEBDRIVE_URL=https://foo/bar/webdav/ \
--e WEBDRIVE_SYNC_SOURCE=/mnt/source \
--e WEBDRIVE_SYNC_DESTINATION=/mnt/webdrive \
--e WEBDRIVE_POLLTIME=10 \
 -e SYNC_USERID=1001 \
 -v <host/path/to/offline/folder>:/mnt/webdrive \
 -d \
@@ -24,7 +21,7 @@ docker run \
 richardregeer/davfs-webdisk
 ```
 
-- If no `WEBDRIVE_POLLTIME` is given `60` seconds will be used as default.
-- if no `WEBDRIVE_SYNC_SOURCE` is given `/mnt/source` will be used as default.
-- if no `WEBDRIVE_SYNC_DESTINATION` is given `/mnt/webdrive` will be used as default.
 - if no `SYNC_USERID` is given `0` will be used as default user for the created files in the shared volume.
+
+The configuration of unison can be changed by override it using `-v <host/path/to/unision/profile.prf>:/root/.unison/default.prf`  
+For more information about unison profiles see the [manual](https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html#profileegs).
