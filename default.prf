@@ -10,9 +10,13 @@ fastcheck = true
 auto = true
 batch = true
 times = true
-owner = true
-group = true
 prefer = newer
+
+# Ignore 
+ignore = Name temp.*
+ignore = Name .*
+ignore = Name *.tmp
+ignore = Path lost+found
 
 # Daemonize 
 repeat = 30

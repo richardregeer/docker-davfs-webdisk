@@ -9,7 +9,7 @@ A shared host volume can be used for the offline webdav folder. By default all f
 
 ```bash
 docker run \
---init \
+--log-opt max-size=10m \
 -e WEBDRIVE_USER=<username> \
 -e WEBDRIVE_PASSWORD=<password> \
 -e WEBDRIVE_URL=https://foo/bar/webdav/ \
