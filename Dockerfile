@@ -11,7 +11,6 @@ RUN apt-get update \
   && rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 COPY ./default.prf /root/.unison/default.prf
-COPY ./davfs2.conf /etc/davfs2/davfs2.conf
 COPY ./start-sync.sh /usr/local/bin
 
 ENTRYPOINT [ "/usr/local/bin/start-sync.sh" ]
