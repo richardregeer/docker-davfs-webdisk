@@ -25,8 +25,8 @@ if [ $FOLDER_USER -gt 0 ]; then
   useradd webdrive -u $FOLDER_USER -N -G users
 fi
 
-# Mount the webdaf drive               
-mount.davfs $URL /mnt/source
+# Mount the webdaf drive 
+mount -t davfs $URL /mnt/source -o uid=$FOLDER_USER,gid=users,dir_mode=755,file_mode=755
 
 # Start the endless sync process
 unison

@@ -21,7 +21,10 @@ docker run \
 richardregeer/davfs-webdisk
 ```
 
-- if no `SYNC_USERID` is given `0` will be used as default user for the created files in the shared volume.
+- if no `SYNC_USERID` is given `0` or root will be used as default user for the created files in the shared volume.
 
 The configuration of unison can be changed by override it using `-v <host/path/to/unision/profile.prf>:/root/.unison/default.prf`  
 For more information about unison profiles see the [manual](https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html#profileegs).
+
+The configuration for davfs can be changed by override it using `-v <host/path/to/davfs/davfs2.conf>:/etc/davfs2/davfs2.conf`  
+For more information about davfs configuration see the [manual](https://www.systutorials.com/docs/linux/man/5-davfs2.conf/).
