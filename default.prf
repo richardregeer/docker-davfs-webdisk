@@ -10,6 +10,8 @@ fastcheck = true
 auto = true
 batch = true
 times = true
+owner = true
+group = true
 prefer = newer
 
 # Ignore 
